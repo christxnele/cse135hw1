@@ -4,9 +4,10 @@
 - Christine Le
 - Ryan Soe
 
-## The password for user "grader" on your Apache server (TODO)
-- UPDATE: If you use an SSH key for your **root** user, you will need to use an SSH key for your **grader** account, which means that we will need the **private key** for this grader account (along with the passphrase for this private key if there is one). **INCLUDE THIS SSH KEY AND (if applicable) PASSPHRASE ALONG WITH THE PASSWORD FOR THE GRADER ACCOUNT** in your submission.
-- **Test logging** into the grader account before submission. If we cannot log into this account, we cannot grade your homework and there may be a penalty. Please indicate all log in information for the TAs carefully.
+## The password for user "grader" on your Apache server
+
+ssh grader@142.93.88.250
+password: grader
 
 ## Link to our site, which has:
 https://cse135vrc.site
@@ -18,7 +19,7 @@ https://cse135vrc.site
 - hw1/hello.php
 - hw1/report.html
 
-## Details of Github auto deploy setup (TODO)
+## Details of Github auto deploy setup
 This project uses a simple GitHub Actions–based deployment pipeline that automatically deploys the site to a DigitalOcean server on every push to the main branch using SSH and rsync. The repository is organized into separate directories for each site, and a GitHub Actions workflow (.github/workflows/deploy.yml) checks out the code, configures SSH using a private key stored in GitHub Secrets, and synchronizes each directory to its corresponding web root under /var/www on the server. On the server side, a dedicated deploy user is created, granted access to the web directories, and configured with an SSH key whose private portion is added to GitHub Secrets along with the server IP and username. This setup enables fast, repeatable deployments using only native tools (SSH and rsync), avoids third-party deployment services, and keeps full control of the infrastructure, with an optional optimization to deploy only the sites whose files changed.
 
 ## Username/password info for logging into the site
