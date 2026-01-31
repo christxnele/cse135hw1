@@ -1,0 +1,150 @@
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  padding: 20px 24px;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+  background: #fff;
+  font-size: 16px;
+}
+
+a{ color:#00f; text-decoration: underline; }
+a:visited{ color:#551a8b; }
+
+/* Team box */
+header{
+  position: relative;
+  padding-right: 320px;
+}
+
+h1{
+  margin: 0 0 6px 0;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+header > p{
+  margin: 0 0 14px 0;
+  font-size: 16px;
+}
+
+aside{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 280px;
+  background: #eee;
+  padding: 10px 12px;
+  border-radius: 2px;
+}
+
+aside h2{
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+aside ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+aside li{ margin: 3px 0; }
+
+/* Sections */
+main section{
+  margin: 16px 0 12px 0;
+}
+
+main section > h2{
+  margin: 0 0 6px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main section > nav,
+main section > table,
+main section > p{
+  background: #eee;
+  padding: 8px 10px;
+  margin: 0;
+}
+
+/* HW1 list */
+nav ul{ margin: 0; padding-left: 20px; }
+nav li{ margin: 3px 0; }
+
+/* HW2 table */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+thead th{
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 22px 6px 0;
+  vertical-align: top;
+}
+
+tbody td{
+  font-size: 15px;
+  padding: 2px 22px 2px 0;
+  vertical-align: top;
+}
+
+/* Footer  */
+footer{
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+
+@media (max-width: 900px){
+  body{ padding: 16px 14px; }
+
+  header{
+    padding-right: 0;
+  }
+
+  aside{
+    position: static;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  h1{ font-size: 30px; }
+  main section > h2{ font-size: 22px; }
+}
+
+@media (max-width: 600px){
+  h1{ font-size: 26px; }
+  main section > h2{ font-size: 20px; }
+
+  table, thead, tbody, tr, th, td{
+    display: block;
+    width: 100%;
+  }
+
+  thead{ display: none; }
+
+  tbody tr{
+    background: #fff;
+    margin: 8px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  tbody td{
+    padding: 4px 0;
+    font-size: 14px;
+  }
+
+  tbody tr td:nth-child(1)::before{ content: "Perl: "; font-weight: 700; }
+  tbody tr td:nth-child(2)::before{ content: "PHP: "; font-weight: 700; }
+  tbody tr td:nth-child(3)::before{ content: "Python: "; font-weight: 700; }
+  tbody tr td:nth-child(4)::before{ content: "Go: "; font-weight: 700; }
+}
