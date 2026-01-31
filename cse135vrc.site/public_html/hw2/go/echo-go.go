@@ -54,6 +54,6 @@ func main() {
 	}
 
 	// output JSON
-	jsonData, _ := json.MarshalIndent(response, "", "  ")
+	jsonData, _ := json.Marshal(response)
 	fmt.Println(string(jsonData))
 }
